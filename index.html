@@ -5,10 +5,57 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="jayonlydigital.GitHub.io : FEWD23">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>FEWD23</title>
+    <script>
+      //$(function(){
+          function toggleState(temp){
+            if(temp==1){
+              $('.expandLesson02').removeClass("openHeight");
+              $('.link02').removeClass("colh1");
+            }else{
+              $('.expandLesson01').removeClass("openHeight");
+              $('.link01').removeClass("colh1");
+            }
+            $('.expandLesson0'+temp).toggleClass("openHeight");
+            $('.link0'+temp).toggleClass("colh1");
+            $('.exp0'+temp).toggleClass("expAdd");
+          };
+      //});
+    </script>
+    <style>
+      .link{
+        color:#ccc;
+      }
+      .colh1{
+        color:#333;
+      }
+      .expandLesson01, .expandLesson02{
+        display:block;
+        cursor:pointer;
+        overflow:hidden;
+        height:0px;
+
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+      .openHeight{
+        height:650px;
+      }
+      .exp01:before, .exp02:before{
+        content: "+";
+      }
+      .expAdd:before{
+        content: "-";
+      }
+      h1:hover{
+        color:#000;
+      }
+    </style>
   </head>
 
   <body>
@@ -17,10 +64,10 @@
     <div id="header_wrap" class="outer">
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/jayonlydigital">View on GitHub</a>
-          <div style="background:white; padding:6px; width:100%;"><img src="https://s3.amazonaws.com/static-assets.generalassemb.ly/logos/generalassembly-open-graph.png" alt="General Assembly" width="250px" /></div>
+          <div style="background:white; padding:6px; width:100%; height:160px;"><img src="https://s3.amazonaws.com/static-assets.generalassemb.ly/logos/generalassembly-open-graph.png" alt="General Assembly" width="250px" /></div>
           <h1 id="project_title">FEWD23</h1>
           <p style="color:white;">General Assembly - Front End Web Development</p>
-          <h2 id="project_tagline">Lesson 1 Material</h2>
+          <h2 id="project_tagline">Lesson 1 & 2 Materials</h2>
 
         </header>
     </div>
@@ -30,6 +77,43 @@
       <section id="main_content" class="inner">
         <h4>Resources</h4>
         <p style="color:#333">Important links/info to use during the course.</p>
+
+
+
+
+        <hr />
+        <h1 class="link link01 colh1" onClick="toggleState(1)" style="display:block;cursor:pointer;">Lesson 01 Links <span class="exp01 expAdd"></span></h1>
+        
+        <div class="expandLesson01 openHeight">
+
+        <h3>Pre Work - Dash</h3>
+        <p><a href="http://codepen.io/jaydigital/pen/YqymWg" target="_blank">https://dash.generalassemb.ly/projects</a></p>
+
+        <h3>Exercise: Syntax Errors</h3>
+        <p><a href="https://github.com/jayonlydigital/Exercise_Syntax_Errors/blob/master/index.html" target="_blank">https://github.com/jayonlydigital/Exercise_Syntax_Errors</a></p>
+
+        <h3>Exercise: Marking Up Content (GA Press Release)</h3>
+        <p><a href="https://github.com/jayonlydigital/Exercise_Marking_Up_Content" target="_blank">https://github.com/jayonlydigital/Exercise_Marking_Up_Content</a></p>
+
+        <h3>Exercise: Chocolate Chip Cookie Recipe</h3>
+        <p><a href="https://github.com/jayonlydigital/Exercise_Cookie_Recipe" target="_blank">https://github.com/jayonlydigital/Exercise_Cookie_Recipe</a></p>
+        <br />
+        <h3>Homework & Reading</h3>
+        <h4>Create a Resume Website</h4>
+        <p>Read about HTML5 tags<br />
+        <a href="http://www.w3schools.com/tags/">http://www.w3schools.com/tags/</a></p>
+        <p>Read about CSS Colors<br />
+        <a href="http://www.w3schools.com/cssref/css_colors.asp">http://www.w3schools.com/cssref/css_colors.asp</a><br />
+        <a href="http://www.quackit.com/css/css_color_codes.cfm">http://www.quackit.com/css/css_color_codes.cfm</a></p>
+
+        </div>
+
+
+
+        <hr />
+        <h1 class="link link02" onClick="toggleState(2)" style="display:block;cursor:pointer;">Lesson 02 Links <span class="exp02"></span></h1>
+        
+        <div class="expandLesson02">
 
         <h3>Pre Work - Dash</h3>
         <p><a href="http://codepen.io/jaydigital/pen/YqymWg" target="_blank">https://dash.generalassemb.ly/projects</a></p>
@@ -43,12 +127,14 @@
         <h3>Exercise: Chocolate Chip Cookie Recipe</h3>
         <p><a href="https://github.com/jayonlydigital/Exercise_Cookie_Recipe" target="_blank">https://github.com/jayonlydigital/Exercise_Cookie_Recipe</a></p>
 
+        </div>
+
 
 
         <hr />
 
         <h3>Lesson Slides</h3>
-        <p style="color:#333">Slides for each lesson.</p>
+        <p style="color:#333">Slides will be added below after each lesson.</p>
 
         <ul>
           <li><h4>Introduction</h4></li>
