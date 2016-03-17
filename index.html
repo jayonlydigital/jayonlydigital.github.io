@@ -13,13 +13,13 @@
       //$(function(){
           function toggleState(temp){
             if(temp==1){
-              $('.expandLesson02').removeClass("openHeight");
+              $('.expandLesson02').removeClass("openHeight2");
               $('.link02').removeClass("colh1");
             }else{
-              $('.expandLesson01').removeClass("openHeight");
+              $('.expandLesson01').removeClass("openHeight1");
               $('.link01').removeClass("colh1");
             }
-            $('.expandLesson0'+temp).toggleClass("openHeight");
+            $('.expandLesson0'+temp).toggleClass("openHeight"+temp);
             $('.link0'+temp).toggleClass("colh1");
             $('.exp0'+temp).toggleClass("expAdd");
           };
@@ -43,8 +43,11 @@
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
       }
-      .openHeight{
+      .openHeight1{
         height:650px;
+      }
+      .openHeight2{
+        height:300px;
       }
       .exp01:before, .exp02:before{
         content: "+";
@@ -84,7 +87,7 @@
         <hr />
         <h1 class="link link01 colh1" onClick="toggleState(1)" style="display:block;cursor:pointer;">Lesson 01 Links <span class="exp01 expAdd"></span></h1>
         
-        <div class="expandLesson01 openHeight">
+        <div class="expandLesson01 openHeight1">
 
         <h3>Pre Work - Dash</h3>
         <p><a href="http://codepen.io/jaydigital/pen/YqymWg" target="_blank">https://dash.generalassemb.ly/projects</a></p>
@@ -115,17 +118,8 @@
         
         <div class="expandLesson02">
 
-        <h3>Pre Work - Dash</h3>
-        <p><a href="http://codepen.io/jaydigital/pen/YqymWg" target="_blank">https://dash.generalassemb.ly/projects</a></p>
-
-        <h3>Exercise: Syntax Errors</h3>
-        <p><a href="https://github.com/jayonlydigital/Exercise_Syntax_Errors/blob/master/index.html" target="_blank">https://github.com/jayonlydigital/Exercise_Syntax_Errors</a></p>
-
-        <h3>Exercise: Marking Up Content (GA Press Release)</h3>
-        <p><a href="https://github.com/jayonlydigital/Exercise_Marking_Up_Content" target="_blank">https://github.com/jayonlydigital/Exercise_Marking_Up_Content</a></p>
-
-        <h3>Exercise: Chocolate Chip Cookie Recipe</h3>
-        <p><a href="https://github.com/jayonlydigital/Exercise_Cookie_Recipe" target="_blank">https://github.com/jayonlydigital/Exercise_Cookie_Recipe</a></p>
+        <h3>Exersise: About Me Page</h3>
+        <p><a href="https://github.com/jayonlydigital/Exercise_About_Me_Page" target="_blank">https://github.com/jayonlydigital/Exercise_About_Me_Page</a></p>
 
         </div>
 
